@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:overScrollMode="ifContentScrolls">
+            <TextView
+                android:text="Restaurants"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+            <ImageView
+                android:id="@+id/cat_imageView1"
+                android:src="@drawable/EatingOutSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="Restaurant" />
+            <TextView
+                android:text="Cinema"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+            <ImageView
+                android:src="@drawable/FunSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cat_imageView2"
+                android:tag="Cinema" />
+            <TextView
+                android:text="Supermarket"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" />
+            <ImageView
+                android:src="@drawable/HomeAndEssentialsSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cat_imageView3"
+                android:tag="Supermarket" />
+            <TextView
+                android:text="Lifestyle"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4" />
+            <ImageView
+                android:src="@drawable/LifestyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cat_imageView4"
+                android:tag="Electronics" />
+            <TextView
+                android:text="Travel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5" />
+            <ImageView
+                android:src="@drawable/TravelSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cat_imageView5"
+                android:tag="Travel" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

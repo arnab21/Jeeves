@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="centili-xamarin">
+  <name>In-App Payment</name>
+  <publisher>Infobip Ltd.</publisher>
+  <publisher-url>https://www.centili.com</publisher-url>
+  <version>0.1.1</version>
+  <summary>Centili in-app Payment component for Xamarin.</summary>
+  <samples>
+    <sample id="mpayments-paymentapi-xamarin-test">
+      <name>Android demo application.</name>
+      <summary>Demonstrates usage of Centili in-app Payment on your Android device with valid SIM card.</summary>
+    </sample>
+  </samples>
+</component>

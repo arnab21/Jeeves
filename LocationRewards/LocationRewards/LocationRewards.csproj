@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8D434CE-CCE3-442F-A4DD-DFF08A24E0BD}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LocationRewards</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>LocationRewards</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.MonoDroid">
+      <HintPath>..\Components\restsharp-104.1.0\lib\android\RestSharp.MonoDroid.dll</HintPath>
+    </Reference>
+    <Reference Include="Infobip.Mpayments">
+      <HintPath>..\Components\centili-xamarin-0.1.1\lib\android\Infobip.Mpayments.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RewardsFrameActivity.cs" />
+    <Compile Include="RewardsAppFragments.cs" />
+    <Compile Include="..\TradingPartnersDirectory\Filter.cs">
+      <Link>TradingPartnersDirectory\Filter.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\IDirectoryService.cs">
+      <Link>TradingPartnersDirectory\IDirectoryService.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\MemoryDirectoryService.cs">
+      <Link>TradingPartnersDirectory\MemoryDirectoryService.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Data\IFavoritesRepository.cs">
+      <Link>TradingPartnersDirectory\Data\IFavoritesRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Data\Person.cs">
+      <Link>TradingPartnersDirectory\Data\Person.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Data\PropertyAttribute.cs">
+      <Link>TradingPartnersDirectory\Data\PropertyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Data\Search.cs">
+      <Link>TradingPartnersDirectory\Data\Search.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Data\SearchProperty.cs">
+      <Link>TradingPartnersDirectory\Data\SearchProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Utilities\CsvReader.cs">
+      <Link>TradingPartnersDirectory\Utilities\CsvReader.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Utilities\Gravatar.cs">
+      <Link>TradingPartnersDirectory\Utilities\Gravatar.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Utilities\ImageDownloader.cs">
+      <Link>TradingPartnersDirectory\Utilities\ImageDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\Utilities\ThrottledHttp.cs">
+      <Link>TradingPartnersDirectory\Utilities\ThrottledHttp.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\ErrorEventArgs.cs">
+      <Link>TradingPartnersDirectory\ViewModels\ErrorEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\FavoritesViewModel.cs">
+      <Link>TradingPartnersDirectory\ViewModels\FavoritesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\LoginViewModel.cs">
+      <Link>TradingPartnersDirectory\ViewModels\LoginViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\PeopleGroup.cs">
+      <Link>TradingPartnersDirectory\ViewModels\PeopleGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\PersonViewModel.cs">
+      <Link>TradingPartnersDirectory\ViewModels\PersonViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\SearchViewModel.cs">
+      <Link>TradingPartnersDirectory\ViewModels\SearchViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ViewModels\ViewModelBase.cs">
+      <Link>TradingPartnersDirectory\ViewModels\ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="PeopleGroupsAdapter.cs" />
+    <Compile Include="PartnerProductsActivity.cs" />
+    <Compile Include="TraderPartnerLocationsActivity.cs" />
+    <Compile Include="PeopleGroupsListView.cs" />
+    <Compile Include="AndroidImageDownloader.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="PersonAdapter.cs" />
+    <Compile Include="SearchActivity.cs" />
+    <Compile Include="..\TradingPartnersDirectory\Data\XmlFavoritesRepository.cs">
+      <Link>TradingPartnersDirectory\Data\XmlFavoritesRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\PartnerContracts\TradingPartners.cs">
+      <Link>TradingPartnersDirectory\PartnerContracts\TradingPartners.cs</Link>
+    </Compile>
+    <Compile Include="TraderPartnerProductsBrowseActivity.cs" />
+    <Compile Include="..\TradingPartnersDirectory\PartnerContracts\PartnerProducts.cs">
+      <Link>TradingPartnersDirectory\PartnerContracts\PartnerProducts.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\PartnersProductsRestApiRepository.cs">
+      <Link>TradingPartnersDirectory\PartnersProductsRestApiRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\TradingPartnersRestApiRepository.cs">
+      <Link>TradingPartnersDirectory\TradingPartnersRestApiRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\PartnerContracts\Product.cs">
+      <Link>TradingPartnersDirectory\PartnerContracts\Product.cs</Link>
+    </Compile>
+    <Compile Include="..\TradingPartnersDirectory\ProductsRestApiRepository.cs">
+      <Link>TradingPartnersDirectory\ProductsRestApiRepository.cs</Link>
+    </Compile>
+    <Compile Include="PaymentActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\MSNPeople.jpg" />
+    <AndroidResource Include="Resources\drawable\ic_action_attach.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_call.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_copy.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_cut.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_delete.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_done.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_edit.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_locate.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_mail.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_mail_add.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_microphone.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_paste.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_photo.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_search.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_select_all.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_send.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_share.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_star.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_user.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_user_add.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_video.png" />
+    <AndroidResource Include="Resources\drawable\drawer_shadow.9.png" />
+    <AndroidResource Include="Resources\drawable\ic_drawer.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_map.png" />
+    <AndroidResource Include="Resources\layout\RewardsFragment.axml" />
+    <AndroidResource Include="Resources\layout\RewardsFrame.axml" />
+    <AndroidResource Include="Resources\drawable\ic_action_sessions.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_speakers.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_whats_on.png" />
+    <AndroidResource Include="Resources\drawable\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\ic_tab_my_schedule.png" />
+    <AndroidResource Include="Resources\drawable\ic_tab_sessions.png" />
+    <AndroidResource Include="Resources\drawable\ic_tab_speakers.png" />
+    <AndroidResource Include="Resources\drawable\ic_tab_whats_on.png" />
+    <AndroidResource Include="Resources\drawable\EatingOut.png" />
+    <AndroidResource Include="Resources\drawable\Fun.png" />
+    <AndroidResource Include="Resources\drawable\HomeAndEssentials.png" />
+    <AndroidResource Include="Resources\drawable\Lifestyle.png" />
+    <AndroidResource Include="Resources\drawable\Travel.png" />
+    <AndroidResource Include="Resources\Color\disabledText.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\accept.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\actionbar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_star_off_normal_holo_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_star_on_normal_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_btn_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_search_holo_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_search_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_star.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search_api_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\loginbox.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Placeholder.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\questionmark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\XamarinTitle.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\actionbar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_rating_star_off_normal_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_rating_star_on_normal_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_btn_search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu_search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu_search_holo_dark.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu_search_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu_star.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_search_api_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\loginbox.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Placeholder.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\questionmark.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\XamarinTitle.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\accept.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\actionbar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_star_off_normal_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_star_on_normal_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_btn_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu_search_holo_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu_search_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu_star.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search_api_holo_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\loginbox.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\XamarinTitle.png" />
+    <AndroidResource Include="Resources\layout\EmailPropertyListItem.axml" />
+    <AndroidResource Include="Resources\layout\GroupHeaderListItem.axml" />
+    <AndroidResource Include="Resources\layout\PersonListItem.axml" />
+    <AndroidResource Include="Resources\layout\PhonePropertyListItem.axml" />
+    <AndroidResource Include="Resources\layout\PropertyListItem.axml" />
+    <AndroidResource Include="Resources\layout\SearchActivity.axml" />
+    <AndroidResource Include="Resources\layout\SectionHeader.axml" />
+    <AndroidResource Include="Resources\layout\TwitterPropertyListItem.axml" />
+    <AndroidResource Include="Resources\layout\UrlPropertyListItem.axml" />
+    <AndroidResource Include="Resources\xml\searchable.xml" />
+    <AndroidResource Include="Resources\drawable\twitter.png" />
+    <AndroidResource Include="Resources\menu\AppActivityOptionsMenu.xml" />
+    <AndroidResource Include="Resources\menu\TradingPartnerActivityOptionsMenu.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\layout\TraderPartnerLocationsList.axml" />
+    <AndroidResource Include="Resources\layout\PartnerProducts.axml" />
+    <AndroidResource Include="Resources\layout\PartnerProductsList.axml" />
+    <AndroidResource Include="Resources\drawable\TravelSmall.png" />
+    <AndroidResource Include="Resources\drawable\LifestyleSmall.png" />
+    <AndroidResource Include="Resources\drawable\HomeAndEssentialsSmall.png" />
+    <AndroidResource Include="Resources\drawable\FunSmall.png" />
+    <AndroidResource Include="Resources\drawable\EatingOutSmall.png" />
+    <AndroidResource Include="Resources\drawable\Redeem.png" />
+    <AndroidResource Include="Resources\drawable\Buy.png" />
+    <AndroidResource Include="Resources\layout\PaymentOptions.axml" />
+    <AndroidResource Include="Resources\layout\ImagePropertyListItem.axml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="restsharp">
+      <Version>104.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="centili-xamarin">
+      <Version>0.1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Color\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\xml\" />
+    <Folder Include="TradingPartnersDirectory\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="TradingPartnersDirectory\PartnerContracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\XamarinDirectory.csv" />
+    <AndroidAsset Include="Assets\XamarinFavorites.xml" />
+  </ItemGroup>
+</Project>
